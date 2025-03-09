@@ -15,7 +15,7 @@ when 200
     puts "Número de cidades: #{corpo['cities'].size}"
     puts "Cidades do #{corpo['state']}: "
     corpo['cities'].each {|cidade| print "#{cidade}, "}
-when 404
+when 400 || 404
     puts "DDD invalido."
 when 500..599
     puts "Erro na API, tente novamente mais tarde."
