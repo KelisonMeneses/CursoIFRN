@@ -12,7 +12,9 @@ case resposta.status
 
 when 200
     puts "Estado: #{corpo['state']}"
-
+    puts "Número de cidades: #{corpo['cities'].size}"
+    puts "Cidades do #{corpo['state']}: "
+    corpo['cities'].each {|cidade| print "#{cidade}, "}
 when 404
     puts "DDD invalido."
 when 500..599
